@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16B2657" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Council" representedClassName="Council" syncable="YES" codeGenerationType="class">
+        <attribute name="mName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mTotal" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="numOfPeaple" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="council" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="Equipment" representedClassName="Equipment" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="eName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eTotal" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="standard" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unitCost" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="equip" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="Personnel" representedClassName="Personnel" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="percent" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="total" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="person" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="Project" representedClassName="Project" syncable="YES" codeGenerationType="class">
+        <attribute name="pName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="council" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Council" inverseName="relationship" inverseEntity="Council" syncable="YES"/>
+        <relationship name="equip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Equipment" inverseName="relationship" inverseEntity="Equipment" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Personnel" inverseName="relationship" inverseEntity="Personnel" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Personnel" positionX="43" positionY="38" width="128" height="133"/>
+        <element name="Equipment" positionX="-126" positionY="243" width="128" height="133"/>
+        <element name="Council" positionX="279" positionY="224" width="128" height="118"/>
+        <element name="Project" positionX="63" positionY="251" width="128" height="118"/>
+    </elements>
+</model>
